@@ -1,0 +1,10 @@
+一、题目1,代码在要求的目录
+
+二、题目2,代码在要求的目录
+
+三、题目3测试入口：/testAppLogger.php
+
+四、题目4代码审批结果：
+	1、geoHelperAddress方法的$cackeKey  建议序列化，防止中文
+	2、geoHelperAddress不建议在最外层做误异常处理，应该分别在两次接口调用时做误异常处理。否则第一次接口出错就退出，不做第二次接口调用
+	3、checkStatusCallback方法，status == 900时，好像没有转换状态码
